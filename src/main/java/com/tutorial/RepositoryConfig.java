@@ -1,5 +1,7 @@
 package com.tutorial;
 
+import com.tutorial.domain.entities.CapituloTemporada;
+import com.tutorial.domain.entities.TemporadaSerie;
 import com.tutorial.domain.GeneroSerie;
 import com.tutorial.domain.Serie;
 import org.springframework.context.annotation.Configuration;
@@ -14,5 +16,7 @@ public class RepositoryConfig extends RepositoryRestConfigurerAdapter {
     config.exposeIdsFor(GeneroSerie.class);
     config.exposeIdsFor(Serie.class);
     config.setReturnBodyOnCreate(true);
+    config.exposeIdsFor(CapituloTemporada.class);
+    config.exposeIdsFor(TemporadaSerie.class);
   }
 }

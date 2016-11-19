@@ -1,4 +1,4 @@
-package com.tutorial.domain;
+package com.tutorial.domain.entities;
 
 import lombok.Data;
 

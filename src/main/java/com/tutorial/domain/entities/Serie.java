@@ -1,9 +1,10 @@
-package com.tutorial.domain;
+package com.tutorial.domain.entities;
 
 import lombok.Data;
 
 import javax.persistence.*;
 import java.sql.Time;
+import java.util.List;
 
 @Data
 @Entity
@@ -18,7 +19,13 @@ public class Serie {
 
   private Time duracion;
 
-  private String genero;
+  @OneToOne
+  @JoinColumn(name = "idGenero", referencedColumnName = "id")
+  GeneroSerie generoSerie;
+
+  @OneToMany
+  @JoinColumn(name = "idSerie")
+  List<TemporadaSerie> temporadaSeries;
 
   private String sinopsis;
 

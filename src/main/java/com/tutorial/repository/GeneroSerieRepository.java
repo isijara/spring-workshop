@@ -1,7 +1,6 @@
 package com.tutorial.repository;
 
-import com.tutorial.domain.GeneroSerie;
-import com.tutorial.domain.Serie;
+import com.tutorial.domain.entities.GeneroSerie;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
